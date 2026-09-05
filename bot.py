@@ -2138,6 +2138,10 @@ async def auto_expire_check():
     save_data()
 
 
-if __name__ == "__main__":
-    token = "MTU0NDA5MzU1NjgwMzY0MTQ5NQ.Gp_7J3.WeZl0YoJBQuZTEqiNrXyOL6D9r4RpFJRMGKiSY"
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+token = os.getenv("DISCORD_TOKEN")
+bot.run(token)
     bot.run(token)
